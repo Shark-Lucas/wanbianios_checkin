@@ -25,4 +25,3 @@ jobs:
       run: |
         pip install -r requirements.txt
         python3 checkin.py
-        done

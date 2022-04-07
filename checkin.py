@@ -22,4 +22,4 @@ print("headers:", headers)
 response = requests.post("https://www.wanbianios.com/wp-admin/admin-ajax.php", data="action=user_qiandao", cookies=cookies, headers=headers)
 response.encoding = 'utf-8'
 print(response.status_code)
-print("response:", response.text)
+print("response:", response.json)

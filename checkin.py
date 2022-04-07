@@ -13,12 +13,13 @@ def str_to_dict(str):
 
 cookies = os.environ.get('COOKIES')
 cookies = str_to_dict(cookies)
-# print("cookies:", cookies)
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0"
 }
-
+print("cookies:", cookies)
+print("headers:", headers)
 response = requests.post("https://www.wanbianios.com/wp-admin/admin-ajax.php", data="action=user_qiandao", cookies=cookies, headers=headers)
 response.encoding = 'utf-8'
-print(response.text)
+print(response.status_code)
+print("response:", response.text)

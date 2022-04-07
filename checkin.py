@@ -11,5 +11,14 @@ def str_to_dict(str):
         dict[i.split('=')[0].strip()] = i.split('=')[1].strip()
     return dict
 
-cookies = ver_info_str = os.environ.get('COOKIES')
-print("cookies:", str_to_dict(cookies))
+cookies = os.environ.get('COOKIES')
+cookies = str_to_dict(cookies)
+# print("cookies:", cookies)
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0"
+}
+
+response = requests.post("https://www.wanbianios.com/wp-admin/admin-ajax.php", data="action=user_qiandao", cookies=cookies, headers=headers)
+response.encoding = 'utf-8'
+print(response.text)

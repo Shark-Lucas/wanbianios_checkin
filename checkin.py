@@ -19,10 +19,8 @@ headers = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.55"
 }
-print("cookies:", cookies)
-print("headers:", headers)
+
 response = requests.post("https://www.wanbianios.com/wp-admin/admin-ajax.php", data="action=user_qiandao", headers=headers, cookies=cookies)
 response.encoding = 'utf-8'
-print(response.status_code)
+print("status_code:", response.status_code)
 print("response:", response.json())
-print("response.text:", response.text)

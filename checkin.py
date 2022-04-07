@@ -1,8 +1,6 @@
 import os
 import requests
 
-
-
 def str_to_dict(str):
     '''
     将字符串转换为字典

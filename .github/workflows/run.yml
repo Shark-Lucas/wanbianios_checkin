@@ -3,15 +3,15 @@ name: 签到
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
   schedule:
-    - cron: 0 22,12 * * *
+    - cron: 0 8,14,20 * * *
   watch:
     types: started
 
 jobs:
   build:
+    env:
+      COOKIES: ${{ secrets.COOKIES }}
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
 

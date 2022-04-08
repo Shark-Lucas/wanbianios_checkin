@@ -31,10 +31,10 @@ if response.text == "0":
     print("错误，请检查COOKIES")
     send_plus_msg("签到错误，请检查COOKIES，返回值：" + response.text)
 elif response.json()['status'] == "1":
-    print("签到成功")
+    print(response.json()['msg'])
     send_plus_msg(response.json()['msg'])
 elif response.json()['status'] == "0":
-    print("今日已签到")
+    print(response.json()['msg'])
 else:
     print("未知错误")
     send_plus_msg("未知错误：" + response.text)

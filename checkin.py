@@ -30,8 +30,8 @@ print("response:", response.json())
 if str(response.text) == "0":
     print("错误，请检查COOKIES")
     send_plus_msg("签到错误，请检查COOKIES，返回值：" + str(response.text))
-elif response.json()['status'] == 1:
+elif response.json()['status'] == "1":
     print("签到成功")
     send_plus_msg("签到成功")
-elif response.json()['status'] == 0:
+elif response.json()['status'] == "0":
     print("今日已签到")

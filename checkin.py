@@ -34,7 +34,10 @@ elif response.json()['status'] == "1":
     print(response.json()['msg'])
     send_plus_msg(response.json()['msg'])
 elif response.json()['status'] == "0":
-    print(response.json()['msg'])
+    msg = response.json()['msg']
+    print(msg)
+    if msg = '请登录后签到'
+    send_plus_msg("Cookie过期：请前往Github-项目页面-Setting-Secret更新Cookie")
 else:
     print("未知错误")
     send_plus_msg("未知错误：" + response.text)

@@ -4,6 +4,7 @@ import requests
 def send_plus_msg(msg):
     global token
     url = f"http://www.pushplus.plus/send?token={token}&title={msg}&content={msg}&template=html"
+    print(url)
     requests.get(url)
 
 def str_to_dict(str):

@@ -17,10 +17,12 @@ def str_to_dict(str):
     return dict
 
 cookies = os.environ.get('COOKIES')
-cookies = str_to_dict(cookies)
 token = os.environ.get('PP_TOKEN')
+test = os.environ.get('TEST')
 print(cookies)
 print(token)
+print(test)
+cookies = str_to_dict(cookies)
 
 headers = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",

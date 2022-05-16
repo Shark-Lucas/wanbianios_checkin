@@ -16,8 +16,8 @@ def str_to_dict(str):
         dict[i.split('=')[0].strip()] = i.split('=')[1].strip()
     return dict
 
-cookies = os.environ.get('COOKIES')
 token = os.environ.get('PP_TOKEN')
+cookies = os.environ.get('COOKIES')
 test = os.environ.get('TEST')
 print(cookies)
 print(token)

@@ -2,7 +2,8 @@ import os
 import requests
 
 def send_plus_msg(msg):
-    url = f"http://www.pushplus.plus/send?token=78465b494d2d494a905bfa5ff02444d2&title={msg}&content={msg}&template=html"
+    global token
+    url = f"http://www.pushplus.plus/send?token={token}&title={msg}&content={msg}&template=html"
     requests.get(url)
 
 def str_to_dict(str):
@@ -16,6 +17,7 @@ def str_to_dict(str):
 
 cookies = os.environ.get('COOKIES')
 cookies = str_to_dict(cookies)
+token = os.environ.get('TOKEN')
 
 headers = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",

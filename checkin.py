@@ -19,6 +19,7 @@ def str_to_dict(str):
 cookies = os.environ.get('COOKIES')
 cookies = str_to_dict(cookies)
 token = os.environ.get('TOKEN')
+print(cookies)
 print(token)
 
 headers = {

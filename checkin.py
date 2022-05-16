@@ -16,12 +16,12 @@ def str_to_dict(str):
         dict[i.split('=')[0].strip()] = i.split('=')[1].strip()
     return dict
 
-token = os.environ.get('PP_TOKEN')
+token = os.environ.get('TOKEN')
 cookies = os.environ.get('COOKIES')
-test = os.environ.get('TEST')
+
 print(cookies)
 print(token)
-print(test)
+
 cookies = str_to_dict(cookies)
 
 headers = {
